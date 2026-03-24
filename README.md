@@ -1,93 +1,37 @@
-# Brugada Syndrome ECG Dataset
+# 🫀 Brugada-HUCA: Automated Brugada Syndrome Detection
 
-## Overview
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This dataset contains electrocardiographic (ECG) recordings from 363 individuals with suspected Brugada Syndrome. Brugada syndrome is a rare but potentially life-threatening cardiac arrhythmia disorder, marked by distinctive ECG abnormalities and an elevated risk of sudden cardiac death.
+## 📋 Overview
+This project provides a robust deep learning pipeline for the automated detection of **Brugada Syndrome (BrS)** using 12-lead ECG signals. 
 
-## Background
+By utilizing a **CNN-BiLSTM** (Convolutional Neural Network + Bidirectional LSTM) hybrid architecture, the model captures both local morphological features (ST-segment elevation) and long-term temporal dependencies in ECG waveforms, specifically focusing on the critical **V1 and V2 leads**.
 
-Brugada syndrome is characterized by a coved-type ST-segment elevation in the right precordial leads (V1–V3), frequently accompanied by a right bundle branch block pattern. Diagnosis is primarily clinical and is based on the identification of this ECG pattern — either occurring spontaneously or induced by sodium channel blockers — along with clinical criteria such as a history of syncope, documented ventricular arrhythmias, or a family history of sudden cardiac death.
+---
 
-## Data Acquisition
+## 🚀 Quick Start (No Installation of Git Required)
 
-- **Sampling Frequency**: 100 Hz
-- **Recording Duration**: 12 seconds per subject
-- **Number of Leads**: 12 standard ECG leads
-- **Total Subjects**: 363 individuals
+### 1. Download & Extract
+1. Click the green **"<> Code"** button on this page.
+2. Select **"Download ZIP"**.
+3. Extract the folder to your **Desktop**.
 
-## Folder Structure
+### 2. Run the Commands
+Open the **Command Prompt (cmd)** and copy-paste the following steps to set up and launch the project:
 
-```
-├── metadata.csv                 # Clinical info about subjects
-├── metadata_dictionary.csv      # Dictionary explaining metadata variables
-├── RECORDS                      # List of all patient IDs
-├── files/                       # ECG data files organized by patient ID
-│   ├── 188981/
-│   │   ├── 188981.dat         # ECG signal data
-│   │   └── 188981.hea         # Header file with recording metadata
-│   ├── 251972/
-│   │   ├── 251972.dat
-│   │   └── 251972.hea
-│   └── [...]
-```
+```cmd
+:: STEP 1: Navigate to the project folder
+cd Desktop\IDSC-2026---Mathegenetic---Brugada-HUCA-main
 
-## Data Characteristics
+:: STEP 2: Install necessary libraries (TensorFlow, Streamlit, Scipy, etc.)
+pip install -r requirements.txt
 
-### Subject Distribution
+:: STEP 3: Train the Model
+:: IMPORTANT: Ensure your dataset is in the 'data/' folder before running.
+:: This generates the 'brugada_champion_model.keras' and 'brugada_scalers.npz' files.
+python train.py
 
-Based on the `brugada` field in metadata:
-- **0**: Healthy individuals
-- **1**: Confirmed Brugada Syndrome diagnosis
-- **2**: Other/atypical cases
-
-### Clinical Variables
-
-- **basal_pattern**: Indicates pathological baseline ECG patterns (independent of Brugada diagnosis)
-- **sudden_death**: Critical outcome variable for risk assessment
-- **brugada**: Primary diagnostic label
-
-## Loading the Dataset
-
-### Reading Metadata
-
-```python
-import pandas as pd
-
-# Load metadata
-metadata = pd.read_csv('metadata.csv')
-
-# Load data dictionary
-data_dict = pd.read_csv('metadata_dictionary.csv')
-
-# Display basic statistics
-print(metadata.head())
-print(f"Total subjects: {len(metadata)}")
-print(f"Brugada patients: {(metadata['brugada'] > 0).sum()}")
-print(f"Healthy subjects: {(metadata['brugada'] == 0).sum()}")
-```
-
-### Reading ECG Signal Data
-
-The ECG data is stored in WFDB (WaveForm DataBase) format, which is commonly used for physiological signals. You can use the `wfdb` Python package to read these files:
-
-```python
-import wfdb
-import matplotlib.pyplot as plt
-
-# Read a single patient's ECG
-patient_id = '188981'
-record = wfdb.rdrecord(f'files/{patient_id}/{patient_id}')
-
-# Access the signal data
-signals = record.p_signal  # Shape: (1200, 12) for 12s at 100Hz, 12 leads
-lead_names = record.sig_name  # Lead names (I, II, III, aVR, aVL, aVF, V1-V6)
-sampling_freq = record.fs  # Sampling frequency (100 Hz)
-
-# Plot a specific lead
-plt.figure(figsize=(12, 4))
-plt.plot(signals[:, 0])  # Plot first lead
-plt.title(f'Patient {patient_id} - {lead_names[0]}')
-plt.xlabel('Sample')
-plt.ylabel('Amplitude (mV)')
-plt.show()
-```
+:: STEP 4: Launch the Diagnostic App
+:: This opens a web-based dashboard in your browser.
+streamlit run app.py
