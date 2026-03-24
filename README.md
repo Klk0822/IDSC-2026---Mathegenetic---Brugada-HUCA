@@ -10,7 +10,7 @@ By utilizing a **CNN-BiLSTM** (Convolutional Neural Network + Bidirectional LSTM
 
 ---
 
-## 🚀 Quick Start (No Installation of Git Required)
+## 🚀 Quick Start
 
 ### 1. Download & Extract
 1. Click the green **"<> Code"** button on this page.
