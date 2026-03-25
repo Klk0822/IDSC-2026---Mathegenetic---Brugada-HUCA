@@ -25,7 +25,7 @@ Open the **Command Prompt (cmd)** and copy-paste the following steps to set up a
 cd C:\Users\User\Downloads\IDSC-2026---Mathegenetic---Brugada-HUCA-main
 
 :: STEP 2: Install necessary libraries (TensorFlow, Streamlit, Scipy, etc.)
-pip install -r requirements.txt
+pip install -r requirement.txt
 
 :: STEP 3: Train the Model
 :: IMPORTANT: Ensure your dataset is in the 'data/' folder before running.
