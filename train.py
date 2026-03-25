@@ -27,7 +27,7 @@ from tensorflow.keras import layers, models, callbacks, optimizers, metrics, reg
 # Think of this section as the control panel for the whole script. 
 # Changing a value here updates it everywhere in the code.
 RANDOM_SEED = 2026
-BASE_DIR = r"C:\Users\User\Downloads\IDSC-2026---Mathegenetic---Brugada-HUCA-main\IDSC-2026---Mathegenetic---Brugada-HUCA-main"
+BASE_DIR = r"C:\Users\User\Downloads\IDSC-2026---Mathegenetic---Brugada-HUCA-main"
 FILES_DIR = os.path.join(BASE_DIR, "files")
 METADATA_FILE = os.path.join(BASE_DIR, "metadata.csv")
 
