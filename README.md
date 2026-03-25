@@ -4,7 +4,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📋 Overview
-
 This project presents an interpretable deep learning pipeline for detecting Brugada Syndrome (BrS) from 12-lead ECG signals. By utilizing a 1D SE-ResNet combined with BiGRU and Multi-Head Attention, the architecture captures subtle morphological features and transient arrhythmic patterns. The framework specifically focuses on leads V1 and V2, using 1D Grad-CAM saliency mapping to ensure clinical transparency and align AI decisions with cardiological intuition.
 ---
 
