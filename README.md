@@ -15,14 +15,14 @@ This project presents an interpretable deep learning pipeline for detecting Brug
 3. Extract the folder to your **Desktop**.
 
 > [!IMPORTANT]
-> **⚠️ Note on Folder Structure:** > Windows often extracts the ZIP into a "double folder" structure. Ensure your terminal path points to the **inner** folder where `train.py` and `app.py` are located.
+> **⚠️ Note on Folder Structure:** > Windows might extracts the ZIP into a "double folder" structure. Ensure that you move the inner folder out so it won’t affect the command lines
 
 ### 2. Run the Commands
 Open the **Command Prompt (cmd)** and copy-paste the following steps to set up and launch the project:
 
 ```cmd
 :: STEP 1: Navigate to the project folder
-cd C:\Users\User\Downloads\IDSC-2026---Mathegenetic---Brugada-HUCA-main\IDSC-2026---Mathegenetic---Brugada-HUCA-main
+cd C:\Users\User\Downloads\IDSC-2026---Mathegenetic---Brugada-HUCA-main
 
 :: STEP 2: Install necessary libraries (TensorFlow, Streamlit, Scipy, etc.)
 pip install -r requirement.txt
