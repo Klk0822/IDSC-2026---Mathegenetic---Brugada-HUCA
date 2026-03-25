@@ -14,6 +14,9 @@ This project presents an interpretable deep learning pipeline for detecting Brug
 2. Select **"Download ZIP"**.
 3. Extract the folder to your **Desktop**.
 
+> [!IMPORTANT]
+> **⚠️ Note on Folder Structure:** > Windows often extracts the ZIP into a "double folder" structure. Ensure your terminal path points to the **inner** folder where `train.py` and `app.py` are located.
+
 ### 2. Run the Commands
 Open the **Command Prompt (cmd)** and copy-paste the following steps to set up and launch the project:
 
