@@ -4,9 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📋 Overview
-This project provides a robust deep learning pipeline for the automated detection of **Brugada Syndrome (BrS)** using 12-lead ECG signals. 
+Brugada Syndrome is a major cause of sudden cardiac death, often missed by manual ECG interpretation. This study introduces an interpretable deep learning framework using Scientific Tensor Engineering to transform raw 12-lead signals into multi-dimensional representations of morphology and amplitude.
 
-By utilizing a **CNN-BiLSTM** (Convolutional Neural Network + Bidirectional LSTM) hybrid architecture, the model captures both local morphological features (ST-segment elevation) and long-term temporal dependencies in ECG waveforms, specifically focusing on the critical **V1 and V2 leads**.
+The model employs a 1D SE-ResNet with BiGRU and Multi-Head Attention to capture transient arrhythmic patterns. We utilize Binary Focal Loss to prioritize patient safety by minimizing fatal false negatives. Finally, 1D Grad-CAM saliency mapping ensures clinical transparency, confirming the model correctly targets the ST-segment, aligning AI decisions with cardiological intuition to bridge the diagnostic gap.
 
 ---
 
