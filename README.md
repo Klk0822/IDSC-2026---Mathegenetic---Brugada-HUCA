@@ -19,7 +19,7 @@ Open the **Command Prompt (cmd)** and copy-paste the following steps to set up a
 
 ```cmd
 :: STEP 1: Navigate to the project folder
-cd C:\Users\User\Downloads\IDSC-2026---Mathegenetic---Brugada-HUCA-main
+cd C:\Users\User\Downloads\IDSC-2026---Mathegenetic---Brugada-HUCA-main\IDSC-2026---Mathegenetic---Brugada-HUCA-main
 
 :: STEP 2: Install necessary libraries (TensorFlow, Streamlit, Scipy, etc.)
 pip install -r requirement.txt
