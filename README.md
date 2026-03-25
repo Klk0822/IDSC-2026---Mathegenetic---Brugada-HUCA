@@ -6,7 +6,7 @@
 ## 📋 Overview
 Brugada Syndrome is a major cause of sudden cardiac death, often missed by manual ECG interpretation. This study introduces an interpretable deep learning framework using Scientific Tensor Engineering to transform raw 12-lead signals into multi-dimensional representations of morphology and amplitude.
 
-The model employs a 1D SE-ResNet with BiGRU and Multi-Head Attention to capture transient arrhythmic patterns. We utilize Binary Focal Loss to prioritize patient safety by minimizing fatal false negatives. Finally, 1D Grad-CAM saliency mapping ensures clinical transparency, confirming the model correctly targets the ST-segment, aligning AI decisions with cardiological intuition to bridge the diagnostic gap.
+The model employs a **1D SE-ResNet with BiGRU** and **Multi-Head Attention** to capture transient arrhythmic patterns. We utilize Binary Focal Loss to prioritize patient safety by minimizing fatal false negatives. Finally, 1D Grad-CAM saliency mapping ensures clinical transparency, confirming the model correctly targets the ST-segment, aligning AI decisions with cardiological intuition to bridge the diagnostic gap.
 
 ---
 
