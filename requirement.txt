@@ -1,0 +1,18 @@
+# Data Manipulation & Math
+numpy
+pandas
+scipy
+scikit-learn
+
+# ECG Signal Processing
+wfdb
+
+# Deep Learning (TensorFlow/Keras)
+tensorflow>=2.10
+
+# Visualization
+matplotlib
+seaborn
+
+# Web Application
+streamlit
